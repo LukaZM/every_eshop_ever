@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Store } from './Interfaces/Store';
+import Categories from './Components/Categories';
 
 
-function App() {
+type AppProps = {
+  store: Store
+}
+
+function App({store}: AppProps) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="header"> AlzaStore </header>
+      <Categories categories={store.getCategories()}/>
     </div>
   );
 }

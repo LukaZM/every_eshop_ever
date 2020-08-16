@@ -40,7 +40,7 @@ const ourStore = new StoreImpl(
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store={ourStore} />
   </React.StrictMode>,
   document.getElementById('root')
 );
